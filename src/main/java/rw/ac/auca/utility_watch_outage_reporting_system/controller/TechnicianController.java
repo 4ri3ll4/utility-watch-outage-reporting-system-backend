@@ -1,0 +1,41 @@
+package rw.ac.auca.utility_watch_outage_reporting_system.controller;
+
+import java.util.*;
+import org.springframework.http.*;
+import org.springframework.web.bind.annotation.*;
+import rw.ac.auca.utility_watch_outage_reporting_system.domain.*;
+import rw.ac.auca.utility_watch_outage_reporting_system.service.*;
+
+@RestController
+@RequestMapping("/api/technicians")
+public class TechnicianController {
+    private final TechnicianService service;
+    public TechnicianController(TechnicianService service) { this.service = service; }
+    @PostMapping("/save")
+    public ResponseEntity<String> save(@RequestBody Technician body) {
+        service.save(body);
+        return ResponseEntity.status(HttpStatus.CREATED).body("Technician saved successfully");
+    }
+    @GetMapping("/all")
+    public List<Technician> all() { return service.all(); }
+    @GetMapping("/{id}")
+    public ResponseEntity<?> byId(@PathVariable("id") UUID id) {
+        Optional<Technician> found = service.byId(id);
+        if (found.isPresent()) return ResponseEntity.ok(found.get());
+        else return ResponseEntity.status(HttpStatus.NOT_FOUND)
+            .body("The technician with that id does not exist");
+    }
+    @PutMapping("/update/{id}")
+    public ResponseEntity<?> update(@PathVariable("id") UUID id, @RequestBody Technician body) {
+        Optional<Technician> found = service.update(id, body);
+        if (found.isPresent()) return ResponseEntity.ok(found.get());
+        else return ResponseEntity.status(HttpStatus.NOT_FOUND)
+            .body("The technician with that id does not exist");
+    }
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<String> delete(@PathVariable("id") UUID id) {
+        if (service.delete(id)) return ResponseEntity.ok("Technician deleted successfully");
+        else return ResponseEntity.status(HttpStatus.NOT_FOUND)
+            .body("The technician with that id does not exist");
+    }
+}
