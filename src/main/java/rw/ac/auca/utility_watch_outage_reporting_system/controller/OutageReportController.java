@@ -48,6 +48,6 @@ public class OutageReportController {
     @GetMapping("/between")
     public List<OutageReport> between(@RequestParam("start") String start,
                                     @RequestParam("end") String end) {
-        return service.between(LocalDate.parse(start), LocalDate.parse(end));
+    return service.between(LocalDate.parse(start), LocalDate.parse(end));
     }
 }
