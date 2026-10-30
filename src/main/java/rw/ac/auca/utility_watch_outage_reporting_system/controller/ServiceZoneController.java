@@ -38,4 +38,8 @@ public class ServiceZoneController {
         else return ResponseEntity.status(HttpStatus.NOT_FOUND)
             .body("The service zone with that id does not exist");
     }
+    @GetMapping("/free")
+    public List<ServiceZone> free() {
+        return service.free();
+    }
 }

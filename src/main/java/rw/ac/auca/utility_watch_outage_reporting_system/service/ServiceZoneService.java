@@ -25,4 +25,7 @@ public class ServiceZoneService {
         repo.deleteById(id);
         return true;
     }
+    public List<ServiceZone> free() {
+        return repo.findFreeZones();
+    }
 }
