@@ -8,7 +8,11 @@ import rw.ac.auca.utility_watch_outage_reporting_system.repository.*;
 @Service
 public class SubscriberService {
     private final SubscriberRepository repo;
-    public SubscriberService(SubscriberRepository repo) { this.repo = repo; }
+    private final TechnicianRepository technicianRepo;
+    public SubscriberService(SubscriberRepository repo, TechnicianRepository technicianRepo) {
+        this.repo = repo;
+        this.technicianRepo = technicianRepo;
+    }
     public Subscriber save(Subscriber value) { return repo.save(value); }
     public List<Subscriber> all() { return repo.findAll(); }
     public Optional<Subscriber> byId(UUID id) { return repo.findById(id); }
@@ -30,5 +34,12 @@ public class SubscriberService {
     }
     public List<Subscriber> byLastName(String lastName) {
         return repo.findByLastNameIgnoreCaseOrderByFirstNameAsc(lastName);
+    }
+    public List<Subscriber> ofTechnician(UUID technicianId) {
+        return repo.findSubscribersOfTechnician(technicianId);
+    }
+
+    public boolean technicianExists(UUID technicianId) {
+        return technicianRepo.existsById(technicianId);
     }
 }

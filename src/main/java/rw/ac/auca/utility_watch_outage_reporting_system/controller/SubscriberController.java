@@ -42,4 +42,12 @@ public class SubscriberController {
     public List<Subscriber> byLastName(@RequestParam("lastName") String lastName) {
         return service.byLastName(lastName);
     }
+    @GetMapping("/of-technician/{technicianId}")
+    public ResponseEntity<?> ofTechnician(@PathVariable("technicianId") UUID id) {
+        if (!service.technicianExists(id)) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body("The technician with that id does not exist");
+        }
+        return ResponseEntity.ok(service.ofTechnician(id));
+    }
 }
