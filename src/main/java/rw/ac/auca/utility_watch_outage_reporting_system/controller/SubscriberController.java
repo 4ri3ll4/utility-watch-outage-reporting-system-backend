@@ -38,4 +38,8 @@ public class SubscriberController {
         else return ResponseEntity.status(HttpStatus.NOT_FOUND)
             .body("The subscriber with that id does not exist");
     }
+    @GetMapping("/by-last-name")
+    public List<Subscriber> byLastName(@RequestParam("lastName") String lastName) {
+        return service.byLastName(lastName);
+    }
 }

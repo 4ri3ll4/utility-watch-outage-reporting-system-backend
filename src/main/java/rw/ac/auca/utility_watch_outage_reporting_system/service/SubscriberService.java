@@ -28,4 +28,7 @@ public class SubscriberService {
         repo.deleteById(id);
         return true;
     }
+    public List<Subscriber> byLastName(String lastName) {
+        return repo.findByLastNameIgnoreCaseOrderByFirstNameAsc(lastName);
+    }
 }
