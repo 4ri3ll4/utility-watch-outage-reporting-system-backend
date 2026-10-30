@@ -54,4 +54,7 @@ public class TechnicianService {
         repo.deleteById(id);
         return true;
     }
+    public List<Technician> byTradeSkill(String name) {
+        return repo.findByTradeSkill(name);
+    }
 }

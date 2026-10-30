@@ -38,4 +38,8 @@ public class TechnicianController {
         else return ResponseEntity.status(HttpStatus.NOT_FOUND)
             .body("The technician with that id does not exist");
     }
+    @GetMapping("/by-trade-skill")
+    public List<Technician> byTradeSkill(@RequestParam("name") String name) {
+        return service.byTradeSkill(name);
+    }
 }
