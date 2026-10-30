@@ -24,4 +24,7 @@ public class TradeSkillService {
         repo.deleteById(id);
         return true;
     }
+    public List<TradeSkill> unused() {
+        return repo.findUnused();
+    }
 }

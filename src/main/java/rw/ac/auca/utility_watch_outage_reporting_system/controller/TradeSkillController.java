@@ -38,4 +38,8 @@ public class TradeSkillController {
         else return ResponseEntity.status(HttpStatus.NOT_FOUND)
             .body("The trade skill with that id does not exist");
     }
+    @GetMapping("/unused")
+    public List<TradeSkill> unused() {
+        return service.unused();
+    }
 }
