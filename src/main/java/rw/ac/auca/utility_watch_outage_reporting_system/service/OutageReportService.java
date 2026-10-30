@@ -1,5 +1,6 @@
 package rw.ac.auca.utility_watch_outage_reporting_system.service;
 
+import java.time.LocalDate;
 import java.util.*;
 import org.springframework.stereotype.Service;
 import rw.ac.auca.utility_watch_outage_reporting_system.domain.*;
@@ -48,5 +49,11 @@ public class OutageReportService {
         if (!repo.existsById(id)) return false;
         repo.deleteById(id);
         return true;
+    }
+    public List<OutageReport> byStatus(OutageStatus status) {
+        return repo.findByStatusOrderByReportDateAsc(status);
+    }
+    public List<OutageReport> between(LocalDate start, LocalDate end) {
+        return repo.findByReportDateBetweenOrderByReportDateAsc(start, end);
     }
 }

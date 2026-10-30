@@ -1,5 +1,6 @@
 package rw.ac.auca.utility_watch_outage_reporting_system.controller;
 
+import java.time.LocalDate;
 import java.util.*;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
@@ -39,5 +40,14 @@ public class OutageReportController {
         if (service.delete(id)) return ResponseEntity.ok("Outage report deleted successfully");
         else return ResponseEntity.status(HttpStatus.NOT_FOUND)
             .body("The outage report with that id does not exist");
+    }
+    @GetMapping("/by-status")
+    public List<OutageReport> byStatus(@RequestParam("status") OutageStatus status) {
+        return service.byStatus(status);
+    }
+    @GetMapping("/between")
+    public List<OutageReport> between(@RequestParam("start") String start,
+                                    @RequestParam("end") String end) {
+        return service.between(LocalDate.parse(start), LocalDate.parse(end));
     }
 }
