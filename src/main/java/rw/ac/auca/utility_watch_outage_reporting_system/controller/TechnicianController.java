@@ -55,4 +55,16 @@ public class TechnicianController {
         else
             return ResponseEntity.ok(result);
     }
+    @PatchMapping("/{technicianId}/service-zone")
+    public ResponseEntity<String> moveZone(@PathVariable("technicianId") UUID id,
+                                        @RequestParam("zoneNumber") int zoneNumber) {
+        String result = service.moveZone(id, zoneNumber);
+        if (result.equals("The technician with that id does not exist")
+                || result.equals("The service zone with that zoneNumber does not exist"))
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(result);
+        else if (result.equals("That service zone is taken by another technician"))
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(result);
+        else
+            return ResponseEntity.ok(result);
+    }
 }

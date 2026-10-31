@@ -69,4 +69,19 @@ public class TechnicianService {
         repo.save(technician.get());
         return "Trade skill added to the technician";
     }
+    public String moveZone(UUID technicianId, int zoneNumber) {
+        Optional<Technician> technician = repo.findById(technicianId);
+        if (technician.isEmpty())
+            return "The technician with that id does not exist";
+        Optional<ServiceZone> zone = zoneRepo.findByZoneNumber(zoneNumber);
+        if (zone.isEmpty())
+            return "The service zone with that zoneNumber does not exist";
+        if (repo.existsByServiceZone(zone.get())
+                && (technician.get().getServiceZone() == null
+                    || !technician.get().getServiceZone().getId().equals(zone.get().getId())))
+            return "That service zone is taken by another technician";
+        technician.get().setServiceZone(zone.get());
+        repo.save(technician.get());
+        return "Service zone changed successfully";
+    }
 }
