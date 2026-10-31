@@ -42,4 +42,17 @@ public class TechnicianController {
     public List<Technician> byTradeSkill(@RequestParam("name") String name) {
         return service.byTradeSkill(name);
     }
+    @PutMapping("/{technicianId}/trade-skills/{tradeSkillId}")
+    public ResponseEntity<String> addTradeSkill(
+            @PathVariable("technicianId") UUID technicianId,
+            @PathVariable("tradeSkillId") UUID tradeSkillId) {
+        String result = service.addTradeSkill(technicianId, tradeSkillId);
+        if (result.equals("The technician with that id does not exist")
+                || result.equals("That trade skill does not exist"))
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(result);
+        else if (result.equals("The technician already has that trade skill"))
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(result);
+        else
+            return ResponseEntity.ok(result);
+    }
 }

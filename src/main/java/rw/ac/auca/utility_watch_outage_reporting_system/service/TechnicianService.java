@@ -16,12 +16,12 @@ public class TechnicianService {
         this.zoneRepo = zoneRepo;
         this.skillRepo = skillRepo;
     }
-    // A2 save: the JSON only holds ids for the zone and skills, so replace them with the real rows.
+
     public Technician save(Technician value) {
         if (value.getServiceZone() != null && value.getServiceZone().getId() != null) {
             Optional<ServiceZone> zone = zoneRepo.findById(value.getServiceZone().getId());
             if (zone.isPresent()) value.setServiceZone(zone.get());
-            else value.setServiceZone(null); // use an existing zone id in Postman
+            else value.setServiceZone(null);
         }
         List<TradeSkill> realSkills = new ArrayList<>();
         if (value.getTradeSkills() != null) {
@@ -45,8 +45,7 @@ public class TechnicianService {
         old.setFirstName(value.getFirstName());
         old.setLastName(value.getLastName());
         old.setPhone(value.getPhone());
-        // the zone and the skills are NOT copied here: they change only with D4 and D3,
-        // so an ordinary PUT can never wipe a technician’s skills or zone.
+
         return Optional.of(repo.save(old));
     }
     public boolean delete(UUID id) {
@@ -56,5 +55,18 @@ public class TechnicianService {
     }
     public List<Technician> byTradeSkill(String name) {
         return repo.findByTradeSkill(name);
+    }
+    public String addTradeSkill(UUID technicianId, UUID tradeSkillId) {
+        Optional<Technician> technician = repo.findById(technicianId);
+        if (technician.isEmpty())
+            return "The technician with that id does not exist";
+        Optional<TradeSkill> skill = skillRepo.findById(tradeSkillId);
+        if (skill.isEmpty())
+            return "That trade skill does not exist";
+        if (technician.get().getTradeSkills().contains(skill.get()))
+            return "The technician already has that trade skill";
+        technician.get().getTradeSkills().add(skill.get());
+        repo.save(technician.get());
+        return "Trade skill added to the technician";
     }
 }
