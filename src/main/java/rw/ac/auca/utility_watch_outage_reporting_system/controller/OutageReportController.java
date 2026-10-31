@@ -55,4 +55,15 @@ public class OutageReportController {
                                     @RequestParam("end") String end) {
     return service.between(LocalDate.parse(start), LocalDate.parse(end));
     }
+    @PatchMapping("/{id}/status")
+    public ResponseEntity<String> changeStatus(@PathVariable("id") UUID id,
+                                            @RequestParam("status") OutageStatus status) {
+        String result = service.changeStatus(id, status);
+        if (result.equals("The outage report with that id does not exist"))
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(result);
+        else if (result.startsWith("Cannot change status from"))
+            return ResponseEntity.badRequest().body(result);
+        else
+            return ResponseEntity.ok(result);
+    }
 }

@@ -47,8 +47,24 @@ public class OutageReportService {
         OutageReport old = found.get();
         old.setUtilityType(value.getUtilityType());
         old.setDescription(value.getDescription());
-        // reportDate, subscriber and technician are not changed here, so a PUT cannot bypass D1.
         return Optional.of(repo.save(old));
+    }
+    public String changeStatus(UUID id, OutageStatus next) {
+        Optional<OutageReport> found = repo.findById(id);
+        if (found.isEmpty())
+            return "The outage report with that id does not exist";
+        OutageReport report = found.get();
+        OutageStatus old = report.getStatus();
+        boolean allowed = false;
+        if (old == OutageStatus.REPORTED)
+            allowed = next == OutageStatus.DISPATCHED || next == OutageStatus.DISMISSED;
+        else if (old == OutageStatus.DISPATCHED)
+            allowed = next == OutageStatus.RESOLVED || next == OutageStatus.DISMISSED;
+        if (!allowed)
+            return "Cannot change status from " + old + " to " + next;
+        report.setStatus(next);
+        repo.save(report);
+        return "Outage report status updated successfully";
     }
     public boolean delete(UUID id) {
         if (!repo.existsById(id)) return false;
