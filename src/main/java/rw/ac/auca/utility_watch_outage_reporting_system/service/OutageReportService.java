@@ -11,11 +11,13 @@ public class OutageReportService {
     private final OutageReportRepository repo;
     private final TechnicianRepository technicianRepo;
     private final SubscriberRepository subscriberRepo;
+    private final RepairActionRepository repairRepo;
     public OutageReportService(OutageReportRepository repo,
-            TechnicianRepository technicianRepo, SubscriberRepository subscriberRepo) {
+            TechnicianRepository technicianRepo, SubscriberRepository subscriberRepo, RepairActionRepository repairRepo) {
         this.repo = repo;
         this.technicianRepo = technicianRepo;
         this.subscriberRepo = subscriberRepo;
+        this.repairRepo = repairRepo;
     }
     
     public String saveChecked(OutageReport body) {
@@ -66,10 +68,14 @@ public class OutageReportService {
         repo.save(report);
         return "Outage report status updated successfully";
     }
-    public boolean delete(UUID id) {
-        if (!repo.existsById(id)) return false;
+    public String deleteChecked(UUID id) {
+        Optional<OutageReport> report = repo.findById(id);
+        if (report.isEmpty()) 
+            return "The outage report with that id does not exist";
+        if (repairRepo.existsByOutageReport(report.get()))
+             return "That outage report has repair actions, delete them first";
         repo.deleteById(id);
-        return true;
+        return "Outage report deleted successfully";
     }
     public List<OutageReport> byStatus(OutageStatus status) {
         return repo.findByStatusOrderByReportDateAsc(status);

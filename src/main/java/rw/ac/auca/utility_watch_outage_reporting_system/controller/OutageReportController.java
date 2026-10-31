@@ -42,9 +42,13 @@ public class OutageReportController {
     }
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> delete(@PathVariable("id") UUID id) {
-        if (service.delete(id)) return ResponseEntity.ok("Outage report deleted successfully");
-        else return ResponseEntity.status(HttpStatus.NOT_FOUND)
-            .body("The outage report with that id does not exist");
+        String result = service.deleteChecked(id);
+        if (result.equals("The outage report with that id does not exist"))
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(result);
+        else if (result.equals("That outage report has repair actions, delete them first"))
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(result);
+        else
+            return ResponseEntity.ok(result);
     }
     @GetMapping("/by-status")
     public List<OutageReport> byStatus(@RequestParam("status") OutageStatus status) {
