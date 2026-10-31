@@ -17,8 +17,10 @@ public class OutageReportService {
         this.technicianRepo = technicianRepo;
         this.subscriberRepo = subscriberRepo;
     }
-    // A2 save: links the real technician and subscriber. D1 replaces this method later.
-    public String save(OutageReport body) {
+    
+    public String saveChecked(OutageReport body) {
+        if (body.getReportDate() == null || body.getReportDate().isBefore(LocalDate.now()))
+            return "Outage report date cannot be in the past";
         if (body.getTechnician() == null || body.getTechnician().getId() == null)
             return "The technician with that id does not exist";
         Optional<Technician> technician = technicianRepo.findById(body.getTechnician().getId());
@@ -27,8 +29,11 @@ public class OutageReportService {
             return "The subscriber with that id does not exist";
         Optional<Subscriber> subscriber = subscriberRepo.findById(body.getSubscriber().getId());
         if (subscriber.isEmpty()) return "The subscriber with that id does not exist";
-        if (body.getStatus() == null) body.setStatus(OutageStatus.REPORTED);
+        if (repo.existsByTechnicianIdAndReportDateAndStatusNot(
+                technician.get().getId(), body.getReportDate(), OutageStatus.DISMISSED))
+            return "Technician is already dispatched on that date";
         body.setId(null);
+        body.setStatus(OutageStatus.REPORTED);
         body.setTechnician(technician.get());
         body.setSubscriber(subscriber.get());
         repo.save(body);

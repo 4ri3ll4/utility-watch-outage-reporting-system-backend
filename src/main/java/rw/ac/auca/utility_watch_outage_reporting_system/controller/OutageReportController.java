@@ -14,10 +14,15 @@ public class OutageReportController {
     public OutageReportController(OutageReportService service) { this.service = service; }
     @PostMapping("/save")
     public ResponseEntity<String> save(@RequestBody OutageReport body) {
-        String result = service.save(body);
-        if (result.equals("Outage report saved successfully"))
+        String result = service.saveChecked(body);
+        if (result.equals("Outage report date cannot be in the past"))
+            return ResponseEntity.badRequest().body(result);
+        else if (result.equals("Technician is already dispatched on that date"))
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(result);
+        else if (result.equals("Outage report saved successfully"))
             return ResponseEntity.status(HttpStatus.CREATED).body(result);
-        else return ResponseEntity.status(HttpStatus.NOT_FOUND).body(result);
+        else
+             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(result);
     }
     @GetMapping("/all")
     public List<OutageReport> all() { return service.all(); }
