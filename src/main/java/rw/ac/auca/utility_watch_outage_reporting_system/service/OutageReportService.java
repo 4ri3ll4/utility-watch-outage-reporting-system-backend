@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import rw.ac.auca.utility_watch_outage_reporting_system.domain.*;
 import rw.ac.auca.utility_watch_outage_reporting_system.repository.*;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 @Service
 public class OutageReportService {
@@ -91,5 +93,8 @@ public class OutageReportService {
     public int cancelDay(UUID technicianId, LocalDate date) {
         return repo.dismissTechnicianDay(technicianId, date,
                 OutageStatus.DISMISSED, OutageStatus.RESOLVED);
+    }
+    public Page<OutageReport> page(Pageable pageable) {
+        return repo.findAll(pageable);
     }
 }

@@ -2,10 +2,15 @@ package rw.ac.auca.utility_watch_outage_reporting_system.controller;
 
 import java.time.LocalDate;
 import java.util.*;
+
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import rw.ac.auca.utility_watch_outage_reporting_system.domain.*;
 import rw.ac.auca.utility_watch_outage_reporting_system.service.*;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 
 @RestController
 @RequestMapping("/api/outage-reports")
@@ -79,5 +84,18 @@ public class OutageReportController {
                                             @RequestParam("date") String date) {
         int count = service.cancelDay(technicianId, LocalDate.parse(date));
         return ResponseEntity.ok(count + " outage reports cancelled");
+    }
+    @GetMapping("/page")
+    public Page<OutageReport> page(@RequestParam("page") int page,
+                                @RequestParam("size") int size,
+                                @RequestParam("sort") String sort) {
+        String[] parts = sort.split(",");
+        Sort direction = Sort.by(parts[0]);
+        if (parts.length > 1 && parts[1].equalsIgnoreCase("desc"))
+            direction = direction.descending();
+        else
+            direction = direction.ascending();
+        Pageable pageable = PageRequest.of(page, size, direction);
+        return service.page(pageable);
     }
 }
