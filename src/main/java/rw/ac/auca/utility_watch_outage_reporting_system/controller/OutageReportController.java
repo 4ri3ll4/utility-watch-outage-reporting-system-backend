@@ -70,4 +70,8 @@ public class OutageReportController {
         else
             return ResponseEntity.ok(result);
     }
+    @GetMapping("/stats/by-status")
+    public List<Object[]> statistics() {
+        return service.statistics();
+    }
 }

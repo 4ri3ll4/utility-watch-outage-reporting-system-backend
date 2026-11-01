@@ -83,4 +83,7 @@ public class OutageReportService {
     public List<OutageReport> between(LocalDate start, LocalDate end) {
     return repo.findByReportDateBetweenOrderByReportDateAsc(start, end);
     }
+    public List<Object[]> statistics() {
+    return repo.countReportsByStatus();
+}
 }
