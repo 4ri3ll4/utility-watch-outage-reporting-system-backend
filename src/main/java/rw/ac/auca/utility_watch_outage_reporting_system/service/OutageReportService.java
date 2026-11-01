@@ -5,6 +5,7 @@ import java.util.*;
 import org.springframework.stereotype.Service;
 import rw.ac.auca.utility_watch_outage_reporting_system.domain.*;
 import rw.ac.auca.utility_watch_outage_reporting_system.repository.*;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class OutageReportService {
@@ -85,5 +86,10 @@ public class OutageReportService {
     }
     public List<Object[]> statistics() {
     return repo.countReportsByStatus();
-}
+    }
+@Transactional
+    public int cancelDay(UUID technicianId, LocalDate date) {
+        return repo.dismissTechnicianDay(technicianId, date,
+                OutageStatus.DISMISSED, OutageStatus.RESOLVED);
+    }
 }

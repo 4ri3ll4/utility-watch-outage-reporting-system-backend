@@ -74,4 +74,10 @@ public class OutageReportController {
     public List<Object[]> statistics() {
         return service.statistics();
     }
+    @PatchMapping("/cancel-day")
+    public ResponseEntity<String> cancelDay(@RequestParam("technicianId") UUID technicianId,
+                                            @RequestParam("date") String date) {
+        int count = service.cancelDay(technicianId, LocalDate.parse(date));
+        return ResponseEntity.ok(count + " outage reports cancelled");
+    }
 }
