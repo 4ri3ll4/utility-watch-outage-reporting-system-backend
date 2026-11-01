@@ -363,10 +363,4 @@ The exam requires each query to use a specific implementation type:
 
 ---
 
-## License
-
-This project was developed for the **INSY 8322 — Web Technology and Internet** mid-term examination at the Adventist University of Central Africa (AUCA). It is for academic use only.
-
----
-
 © 2026 RUREBWAYIRE Ampoze Ariella (Student ID: 27640)
