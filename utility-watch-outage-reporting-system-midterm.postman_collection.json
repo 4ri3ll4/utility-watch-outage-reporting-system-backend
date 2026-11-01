@@ -1,0 +1,1549 @@
+{
+  "info": {
+    "_postman_id": "c2b745d5-7c4f-4a37-8fa3-1e44da175d58",
+    "name": "utility-watch-outage-reporting-system-midterm",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58363647",
+    "_collection_link": "https://go.postman.co/collection/58363647-c2b745d5-7c4f-4a37-8fa3-1e44da175d58?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "A2",
+      "item": [
+        {
+          "name": "Creating Trade Skills",
+          "item": [
+            {
+              "name": "Creating Water Network Trade Skill",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name\":\"Water Network\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/trade-skills/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "trade-skills",
+                    "save"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Creating Power Lines Trade Skill",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name\":\"Power Lines\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/trade-skills/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "trade-skills",
+                    "save"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Creating Metering Trade Skill",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name\":\"Metering\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/trade-skills/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "trade-skills",
+                    "save"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Creating Transformers Trade Skill",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name\":\"Transformers\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/trade-skills/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "trade-skills",
+                    "save"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Creating Service Zones",
+          "item": [
+            {
+              "name": "Creating Gasabo Service Zone",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"zoneNumber\":1,\"name\":\"Gasabo Zone\"}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/service-zones/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "service-zones",
+                    "save"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Creating Kicukiro Service Zone",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"zoneNumber\":2,\"name\":\"Kicukiro Zone\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/service-zones/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "service-zones",
+                    "save"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Creating Nyarugenge Service Zone",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"zoneNumber\":3,\"name\":\"Nyarugenge Zone\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/service-zones/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "service-zones",
+                    "save"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Creating Rwamagana Service Zone",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"zoneNumber\":4,\"name\":\"Rwamagana Zone\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/service-zones/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "service-zones",
+                    "save"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Creating Technicians",
+          "item": [
+            {
+              "name": "Creating Technician Tessy",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"firstName\":\"Tessy\",\"lastName\":\"Irakoze\",\"phone\":\"0780000001\",\r\n \"serviceZone\":{\"id\":\"547e1339-2b3e-44ef-9ee8-347e8ce45b4c\"},\r\n \"tradeSkills\":[{\"id\":\"4cc3bc48-53ba-449c-9f86-2810ab9ea337\"},{\"id\":\"86d7ccde-1c9f-4e95-aaaf-80c6377d6e20\"}]}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/technicians/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "technicians",
+                    "save"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Creating Technician Arsene",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"firstName\":\"Arsene\",\"lastName\":\"Nshuti Mugabo\",\"phone\":\"0780000002\",\r\n \"serviceZone\":{\"id\":\"8226c6dc-cf0e-48b2-82c7-7a8aeafae8db\"},\r\n \"tradeSkills\":[{\"id\":\"cf7cd2d5-4550-4c1c-a6fd-3eae6f914e86\"}]}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/technicians/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "technicians",
+                    "save"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Creating Technician Kim",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"firstName\":\"Kim\",\"lastName\":\"Gakuba\",\"phone\":\"0780000003\",\r\n \"serviceZone\":{\"id\":\"45783112-368a-4efa-a5a2-3e2904f31a28\"},\r\n \"tradeSkills\":[]}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/technicians/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "technicians",
+                    "save"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Creating Subscribers",
+          "item": [
+            {
+              "name": "Creating Subscriber Ariella Ampoze",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"firstName\":\"Ariella\",\"lastName\":\"Ampoze\",\"meterNumber\":\"MTR-04481927\",\"phone\":\"0781000001\",\"address\":\"Kimironko, Gasabo, Kigali\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/subscribers/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "subscribers",
+                    "save"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Creating Subscriber Leila Ampoze",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"firstName\":\"Leila\",\"lastName\":\"Ampoze\",\"meterNumber\":\"MTR-04481928\",\"phone\":\"0781000002\",\"address\":\"Remera, Gasabo, Kigali\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/subscribers/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "subscribers",
+                    "save"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Creating Subscriber Vanessa Icyeza",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"firstName\":\"Vanessa\",\"lastName\":\"Icyeza\",\"meterNumber\":\"MTR-04481930\",\"phone\":\"0781000003\",\"address\":\"Niboye, Kicukiro, Kigali\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/subscribers/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "subscribers",
+                    "save"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Creating Subscriber Arnaud Ngoga",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"firstName\":\"Arnaud\",\"lastName\":\"Ngoga\",\"meterNumber\":\"MTR-04481931\",\"phone\":\"0781000004\",\"address\":\"Nyamirambo, Nyarugenge, Kigali\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/subscribers/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "subscribers",
+                    "save"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Creating Subscriber Kevin Ingabire",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"firstName\":\"Kevin\",\"lastName\":\"Ingabire\",\"meterNumber\":\"MTR-04481932\",\"phone\":\"0781000005\",\"address\":\"Rwamagana Town, Rwamagana\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/subscribers/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "subscribers",
+                    "save"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Getting IDs from Part A",
+          "item": [
+            {
+              "name": "Getting all Trade Skills",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"name\":\"Transformers\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/trade-skills/all",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "trade-skills",
+                    "all"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Getting all Service Zones",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/service-zones/all",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "service-zones",
+                    "all"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Getting all technicians",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/technicians/all",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "technicians",
+                    "all"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Getting all Subscribers",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/subscribers/all",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "subscribers",
+                    "all"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Getting all Reports",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"reportDate\": \"2026-11-18\",\r\n  \"status\": \"REPORTED\",\r\n  \"utilityType\": \"ELECTRICITY\",\r\n  \"description\": \"Power line down after storm\",\r\n  \"subscriber\": { \"id\": \"5fe2c2f6-0262-463b-86ac-8604e2917348\" },\r\n  \"technician\": { \"id\": \"52e4ebf1-c53c-4cfb-a62b-e5eb18795380\" }\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/outage-reports/all",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "outage-reports",
+                    "all"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Creating Outage Reports",
+          "item": [
+            {
+              "name": "Creating a report by Ariella Ampoze",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"reportDate\": \"2026-10-05\",\r\n  \"status\": \"RESOLVED\",\r\n  \"utilityType\": \"WATER\",\r\n  \"description\": \"Burst pipe repaired on the main line\",\r\n  \"subscriber\": { \"id\": \"707a4c5a-2ffb-4aa8-9886-f95f818e577b\" },\r\n  \"technician\": { \"id\": \"c629bf9b-7e6f-4d31-9f79-b87caded7373\" }\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/outage-reports/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "outage-reports",
+                    "save"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Creating a report by Ariella Ampoze (2nd)",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"reportDate\": \"2026-10-20\",\r\n  \"status\": \"DISMISSED\",\r\n  \"utilityType\": \"WATER\",\r\n  \"description\": \"Reported as leak but was a false alarm\",\r\n  \"subscriber\": { \"id\": \"707a4c5a-2ffb-4aa8-9886-f95f818e577b\" },\r\n  \"technician\": { \"id\": \"c629bf9b-7e6f-4d31-9f79-b87caded7373\" }\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/outage-reports/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "outage-reports",
+                    "save"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Creating a report by Ariella Ampoze (3rd)",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"reportDate\": \"2026-11-10\",\r\n  \"status\": \"REPORTED\",\r\n  \"utilityType\": \"WATER\",\r\n  \"description\": \"Low water pressure in the area\",\r\n  \"subscriber\": { \"id\": \"707a4c5a-2ffb-4aa8-9886-f95f818e577b\" },\r\n  \"technician\": { \"id\": \"c629bf9b-7e6f-4d31-9f79-b87caded7373\" }\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/outage-reports/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "outage-reports",
+                    "save"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Creating a report by Leila Ampoze",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"reportDate\": \"2026-10-20\",\r\n  \"status\": \"REPORTED\",\r\n  \"utilityType\": \"WATER\",\r\n  \"description\": \"No water supply since morning\",\r\n  \"subscriber\": { \"id\": \"9c4b7984-e6aa-43ea-9be9-f4be6e6cff85\" },\r\n  \"technician\": { \"id\": \"c629bf9b-7e6f-4d31-9f79-b87caded7373\" }\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/outage-reports/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "outage-reports",
+                    "save"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Creating a report by Vanessa Icyeza",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"reportDate\": \"2026-10-15\",\r\n  \"status\": \"RESOLVED\",\r\n  \"utilityType\": \"ELECTRICITY\",\r\n  \"description\": \"Transformer fuse replaced\",\r\n  \"subscriber\": { \"id\": \"73522ca4-ef1e-439a-bac0-11a7f86af0da\" },\r\n  \"technician\": { \"id\": \"52e4ebf1-c53c-4cfb-a62b-e5eb18795380\" }\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/outage-reports/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "outage-reports",
+                    "save"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Creating a report by Vanessa Icyeza (2nd)",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"reportDate\": \"2026-10-28\",\r\n  \"status\": \"DISPATCHED\",\r\n  \"utilityType\": \"ELECTRICITY\",\r\n  \"description\": \"Frequent power fluctuations\",\r\n  \"subscriber\": { \"id\": \"73522ca4-ef1e-439a-bac0-11a7f86af0da\" },\r\n  \"technician\": { \"id\": \"52e4ebf1-c53c-4cfb-a62b-e5eb18795380\" }\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/outage-reports/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "outage-reports",
+                    "save"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Creating a report by Vanessa Icyeza (3rd)",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"reportDate\": \"2026-11-12\",\r\n  \"status\": \"DISPATCHED\",\r\n  \"utilityType\": \"ELECTRICITY\",\r\n  \"description\": \"Street light outage\",\r\n  \"subscriber\": { \"id\": \"73522ca4-ef1e-439a-bac0-11a7f86af0da\" },\r\n  \"technician\": { \"id\": \"52e4ebf1-c53c-4cfb-a62b-e5eb18795380\" }\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/outage-reports/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "outage-reports",
+                    "save"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Creating a report by Arnaud Ngoga",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"reportDate\": \"2026-10-22\",\r\n  \"status\": \"DISMISSED\",\r\n  \"utilityType\": \"WATER\",\r\n  \"description\": \"Reported leak turned out to be neighbour's gutter overflow\",\r\n  \"subscriber\": { \"id\": \"dfaaa188-f8d4-4e64-ad4e-e90cc87b6a6f\" },\r\n  \"technician\": { \"id\": \"dcfff3ab-39ff-4f6a-8652-71b6d0000b5e\" }\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/outage-reports/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "outage-reports",
+                    "save"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Creating a report by Kevin Ingabire",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"reportDate\": \"2026-11-08\",\r\n  \"status\": \"DISPATCHED\",\r\n  \"utilityType\": \"WATER\",\r\n  \"description\": \"Rwamagana water pressure issue, specialist dispatched from Gasabo\",\r\n  \"subscriber\": { \"id\": \"5fe2c2f6-0262-463b-86ac-8604e2917348\" },\r\n  \"technician\": { \"id\": \"c629bf9b-7e6f-4d31-9f79-b87caded7373\" }\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/outage-reports/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "outage-reports",
+                    "save"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Creating a report by Kevin Ingabire (2nd)",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"reportDate\": \"2026-11-18\",\r\n  \"status\": \"REPORTED\",\r\n  \"utilityType\": \"ELECTRICITY\",\r\n  \"description\": \"Power line down after storm\",\r\n  \"subscriber\": { \"id\": \"5fe2c2f6-0262-463b-86ac-8604e2917348\" },\r\n  \"technician\": { \"id\": \"52e4ebf1-c53c-4cfb-a62b-e5eb18795380\" }\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/outage-reports/save",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "outage-reports",
+                    "save"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "B1",
+      "item": [
+        {
+          "name": "Getting Subscriber by last name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/subscribers/by-last-name?lastName=ampoze",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "subscribers",
+                "by-last-name"
+              ],
+              "query": [
+                {
+                  "key": "lastName",
+                  "value": "ampoze"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "B2",
+      "item": [
+        {
+          "name": "Getting Outage Reports by status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/outage-reports/by-status?status=REPORTED",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "outage-reports",
+                "by-status"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "REPORTED"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "B3",
+      "item": [
+        {
+          "name": "Getting Outage Reports between a certain range of dates",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/outage-reports/between?start=2026-10-01&end=2026-10-31",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "outage-reports",
+                "between"
+              ],
+              "query": [
+                {
+                  "key": "start",
+                  "value": "2026-10-01"
+                },
+                {
+                  "key": "end",
+                  "value": "2026-10-31"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "C1",
+      "item": [
+        {
+          "name": "Getting technician by trade skill name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/technicians/by-trade-skill?name=water",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "technicians",
+                "by-trade-skill"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "water"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Getting technician by trade skill name (even trade skill that belong to no technician)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "C2",
+      "item": [
+        {
+          "name": "Getting service zones that have no technicians",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/service-zones/free",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "service-zones",
+                "free"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "C3",
+      "item": [
+        {
+          "name": "Getting the unused trade skills",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/trade-skills/unused",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "trade-skills",
+                "unused"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "C4",
+      "item": [
+        {
+          "name": "getting the subscribers of each technician by their ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/subscribers/of-technician/c629bf9b-7e6f-4d31-9f79-b87caded7373",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "subscribers",
+                "of-technician",
+                "c629bf9b-7e6f-4d31-9f79-b87caded7373"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "D1",
+      "item": [
+        {
+          "name": "Past date outage report declined",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"reportDate\": \"2026-01-01\",\r\n  \"utilityType\": \"WATER\",\r\n  \"description\": \"test past\",\r\n  \"subscriber\": { \"id\": \"707a4c5a-2ffb-4aa8-9886-f95f818e577b\" },\r\n  \"technician\": { \"id\": \"c629bf9b-7e6f-4d31-9f79-b87caded7373\" }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/outage-reports/save",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "outage-reports",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Declining a date where a technician is already dispatched",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"reportDate\": \"2026-11-08\",\r\n  \"utilityType\": \"WATER\",\r\n  \"description\": \"test duplicate\",\r\n  \"subscriber\": { \"id\": \"707a4c5a-2ffb-4aa8-9886-f95f818e577b\" },\r\n  \"technician\": { \"id\": \"c629bf9b-7e6f-4d31-9f79-b87caded7373\" }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/outage-reports/save",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "outage-reports",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "forcing status REPORTED despite what is written in the json body",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"reportDate\": \"2026-12-15\",\r\n  \"status\": \"RESOLVED\",\r\n  \"utilityType\": \"ELECTRICITY\",\r\n  \"description\": \"D1 test\",\r\n  \"subscriber\": { \"id\": \"73522ca4-ef1e-439a-bac0-11a7f86af0da\" },\r\n  \"technician\": { \"id\": \"52e4ebf1-c53c-4cfb-a62b-e5eb18795380\" }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/outage-reports/save",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "outage-reports",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "D2",
+      "item": [
+        {
+          "name": "Updating an outage report status",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/outage-reports/cec942f2-4819-4d27-9008-66893afd9a95/status?status=DISPATCHED",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "outage-reports",
+                "cec942f2-4819-4d27-9008-66893afd9a95",
+                "status"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "DISPATCHED"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "D3",
+      "item": [
+        {
+          "name": "Adding a trade skill to a technician",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/technicians/dcfff3ab-39ff-4f6a-8652-71b6d0000b5e/trade-skills/86d7ccde-1c9f-4e95-aaaf-80c6377d6e20",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "technicians",
+                "dcfff3ab-39ff-4f6a-8652-71b6d0000b5e",
+                "trade-skills",
+                "86d7ccde-1c9f-4e95-aaaf-80c6377d6e20"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "D4",
+      "item": [
+        {
+          "name": "Moving technician to a new zone",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/technicians/dcfff3ab-39ff-4f6a-8652-71b6d0000b5e/service-zone?zoneNumber=3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "technicians",
+                "dcfff3ab-39ff-4f6a-8652-71b6d0000b5e",
+                "service-zone"
+              ],
+              "query": [
+                {
+                  "key": "zoneNumber",
+                  "value": "3"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "E1",
+      "item": [
+        {
+          "name": "Adding a repair action to a resolved report",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"actionName\": \"Fuse replacement\",\r\n  \"notes\": \"Replaced the blown fuse on the pole\",\r\n  \"hoursTaken\": 2\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/repair-actions/save?outageReportId=7aead78d-e856-470b-b255-e7b67dea83e1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "repair-actions",
+                "save"
+              ],
+              "query": [
+                {
+                  "key": "outageReportId",
+                  "value": "7aead78d-e856-470b-b255-e7b67dea83e1"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "E2",
+      "item": [
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "E3",
+      "item": [
+        {
+          "name": "Trying to delete outage reports that have repair actions",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/outage-reports/delete/7aead78d-e856-470b-b255-e7b67dea83e1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "outage-reports",
+                "delete",
+                "7aead78d-e856-470b-b255-e7b67dea83e1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "F1",
+      "item": [
+        {
+          "name": "Getting stats for outage reports by status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/outage-reports/stats/by-status",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "outage-reports",
+                "stats",
+                "by-status"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "F2",
+      "item": [
+        {
+          "name": "Cancelling a technician's report on a specific date",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/outage-reports/cancel-day?technicianId=c629bf9b-7e6f-4d31-9f79-b87caded7373&date=2026-10-20",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "outage-reports",
+                "cancel-day"
+              ],
+              "query": [
+                {
+                  "key": "technicianId",
+                  "value": "c629bf9b-7e6f-4d31-9f79-b87caded7373"
+                },
+                {
+                  "key": "date",
+                  "value": "2026-10-20"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Bonus 2",
+      "item": [
+        {
+          "name": "Outage report pagination",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Bonus 1",
+      "item": [
+        {
+          "name": "getting the dashboard summary",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/dashboard/summary",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "dashboard",
+                "summary"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
